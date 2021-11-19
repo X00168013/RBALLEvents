@@ -1,0 +1,12 @@
+﻿body {
+}
+
+infoDiv {
+    height: 200px;
+    width: 300px;
+    -webkit-user-select: none;
+    background-color: white;
+}
+#dvMap img {
+    max-width: none
+}
