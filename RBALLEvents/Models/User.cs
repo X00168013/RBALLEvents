@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -25,15 +26,16 @@ namespace RBALLEvents.Models
             [StringLength(50)]
             public string LastName { get; set; }
 
-            [Required]
-            [Column("FirstName")]
-            [Display(Name = "First Name")]
-            [StringLength(50)]
-            public string FirstName { get; set; }
-            [DataType(DataType.EmailAddress)]
-            public string Email { get; set; }
+        [Required]
+       [Column("FirstName")]
+       [Display(Name = "First Name")]
+       [StringLength(50)]
+      public string FirstName { get; set; }
 
-            [DataType(DataType.Date)]
+        [DataType(DataType.EmailAddress)]
+        public string Email { get; set; }
+
+        [DataType(DataType.Date)]
             [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
 
             public DateTime DOB { get; set; }
@@ -57,5 +59,7 @@ namespace RBALLEvents.Models
                     return LastName + ", " + FirstName;
                 }
             }
-        }
+
+
+    }
     }

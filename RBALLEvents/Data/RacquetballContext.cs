@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using RBALLEvents.Models;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RBALLEvents.Data
 {
-    public class RacquetballContext : DbContext 
+    public class RacquetballContext : DbContext
     {
         public RacquetballContext(DbContextOptions<RacquetballContext> options) : base(options)
         {

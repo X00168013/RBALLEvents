@@ -7,6 +7,9 @@
 <h1>Event Registration</h1>
 
 <h4>Registration</h4>
+<h5>Not a member yet?</h5><p>
+    <a asp-controller="Members" asp-action="Create">Register here</a>
+</p>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,11 +17,11 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="EventID" class="control-label"></label>
-                <select asp-for="EventID" class ="form-control" asp-items="ViewBag.EventID"></select>
+                <select asp-for="EventID" class="form-control" asp-items="ViewBag.EventID"></select>
             </div>
             <div class="form-group">
                 <label asp-for="MemberID" class="control-label"></label>
-                <select asp-for="MemberID" class ="form-control" asp-items="ViewBag.MemberID"></select>
+                <select asp-for="MemberID" class="form-control" asp-items="ViewBag.MemberID"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Division" class="control-label"></label>

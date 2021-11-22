@@ -197,8 +197,7 @@ namespace RBALLEvents.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
-
+ 
         private bool EventExists(int id)
         {
             return _context.Events.Any(e => e.RacquetballEventID == id);

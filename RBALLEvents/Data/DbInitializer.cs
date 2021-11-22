@@ -19,10 +19,10 @@ namespace RBALLEvents.Data
 
             var members = new Member[]
             {
-            new Member{FirstName="Mary",LastName="Shelley",DOB=DateTime.Parse("2005-09-01"), Address ="Tucker Street, Castlebar, Co.Mayo", Email = "mary@gmail.com", PhoneNumber = 0891234561, Gender = Gender.Female, AccountType = AccountType.Member, RegistrationDate =DateTime.Parse("2021-01-05")},
+            new Member{FirstName="Mary",LastName="Shelley",DOB=DateTime.Parse("2005-09-01"), Address ="Tucker Street, Castlebar, Co.Mayo", Email = "mary@gmail.com", PhoneNumber = 0891234561,Gender = Gender.Female, AccountType = AccountType.Member, RegistrationDate =DateTime.Parse("2021-01-05")},
             new Member{FirstName="Margaret",LastName="Atwood",DOB=DateTime.Parse("1980-10-03"), Address ="Ottawa Street, Castlebar, Co.Mayo", Email = "margaret@gmail.com", PhoneNumber = 0891234562, Gender = Gender.Female,AccountType = AccountType.Member, RegistrationDate =DateTime.Parse("2021-01-05")},
             new Member{FirstName="Harper",LastName="Lee",DOB=DateTime.Parse("1955-11-01"), Address ="Monroe Street, Moycullen, Co.Galway", Email = "harper@gmail.com", PhoneNumber = 0881234561, Gender = Gender.Female,AccountType = AccountType.Member, RegistrationDate =DateTime.Parse("2021-09-09")},
-            new Member{FirstName="Emily",LastName="Dickinson",DOB=DateTime.Parse("1965-09-07"), Address ="Amherst Street, Fermoy, Co.Cork", Email = "emily@gmail.com", PhoneNumber = 0861234561, Gender = Gender.Female, AccountType = AccountType.Member, RegistrationDate =DateTime.Parse("2021-02-05")},
+            new Member{FirstName="Emily",LastName="Dickinson",DOB=DateTime.Parse("1965-09-07"), Address ="Amherst Street, Fermoy, Co.Cork", Email = "emily@gmail.com", PhoneNumber = 0861234561,Gender = Gender.Female, AccountType = AccountType.Member, RegistrationDate =DateTime.Parse("2021-02-05")},
             new Member{FirstName="Oscar",LastName="Wilde",DOB=DateTime.Parse("1987-01-08"), Address ="Westland Row, Rossmore, Co.Tipperary", Email = "oscar@gmail.com", PhoneNumber = 0851234567, Gender = Gender.Male, AccountType = AccountType.Member, RegistrationDate =DateTime.Parse("2021-11-05")},
             new Member{FirstName="Robert",LastName="Frost",DOB=DateTime.Parse("1991-12-23"), Address ="Boston Street, Tralee, Co.Kerry", Email = "mary@gmail.com", PhoneNumber = 0891234561, Gender = Gender.Male, AccountType = AccountType.Member, RegistrationDate =DateTime.Parse("2021-01-07")},
             new Member{FirstName="Leo",LastName="Tolstoy",DOB=DateTime.Parse("1970-05-15"), Address ="Caesar Street, Fermoy, Co.Cork", Email = "leo@gmail.com", PhoneNumber = 0871234567, Gender = Gender.Male, AccountType = AccountType.Member, RegistrationDate =DateTime.Parse("2021-01-06")}
@@ -83,9 +83,9 @@ namespace RBALLEvents.Data
             var eventlocations = new EventLocation[]
             {
 
-            new EventLocation {EventID = 1, Address="Tralee Regional Sports & Leisure Centre, Cloonalour, Tralee, Co. Kerry", Latitude = 52.272038, Longitude= -9.692023, Description = "Free Parking. Centre closes at 10pm."},
-            new EventLocation{EventID = 2, Address="Moycullen Handball Club, Baile Doite, Co.Galway", Latitude = 53.338748, Longitude= -9.181478 , Description = "Free Parking. Beside GAA pitches"},
-            new EventLocation{EventID = 3, Address="An Sportlann Castlebar, Co.Mayo", Latitude = 53.85, Longitude= -9.3 , Description = "Entry at back of Complex"}
+            new EventLocation {EventID =1, Address="Tralee Regional Sports & Leisure Centre, Cloonalour, Tralee, Co. Kerry", Latitude = 52.272038, Longitude= -9.692023, Description = "Tralee Open"},
+            new EventLocation{EventID =2, Address="Moycullen Handball Club, Baile Doite, Co.Galway", Latitude = 53.338748, Longitude= -9.181478 , Description = "Moycullen Open"},
+            new EventLocation{EventID = 3, Address="An Sportlann Castlebar, Co.Mayo", Latitude = 53.85, Longitude= -9.3 , Description = "Autumn League"}
             };
             foreach (EventLocation c in eventlocations)
             {

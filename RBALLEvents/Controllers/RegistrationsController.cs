@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RBALLEvents.Data;
 using RBALLEvents.Models;
+using SendGrid;
+using SendGrid.Helpers.Mail;
 
 namespace RBALLEvents.Controllers
 {
@@ -49,8 +51,8 @@ namespace RBALLEvents.Controllers
         // GET: Registrations/Create
         public IActionResult Create()
         {
-            ViewData["EventID"] = new SelectList(_context.Events, "RacquetballEventID", "RacquetballEventID");
-            ViewData["MemberID"] = new SelectList(_context.Members, "ID", "Address");
+            ViewData["EventID"] = new SelectList(_context.Events, "RacquetballEventID", "EventName");
+            ViewData["MemberID"] = new SelectList(_context.Members, "ID", "FullName");
             return View();
         }
 
@@ -67,8 +69,9 @@ namespace RBALLEvents.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction("SuccessMessage");
             }
-            ViewData["EventID"] = new SelectList(_context.Events, "RacquetballEventID", "RacquetballEventID", registration.EventID);
-            ViewData["MemberID"] = new SelectList(_context.Members, "ID", "Address", registration.MemberID);
+            ViewData["EventID"] = new SelectList(_context.Events, "RacquetballEventID", "EventName", registration.EventID);
+
+            ViewData["MemberID"] = new SelectList(_context.Members, "ID", "FullName", registration.MemberID);
             return View(registration);
         }
 
@@ -86,7 +89,7 @@ namespace RBALLEvents.Controllers
                 return NotFound();
             }
             ViewData["EventID"] = new SelectList(_context.Events, "RacquetballEventID", "RacquetballEventID", registration.EventID);
-            ViewData["MemberID"] = new SelectList(_context.Members, "ID", "Address", registration.MemberID);
+            ViewData["MemberID"] = new SelectList(_context.Members, "ID", "FullName", registration.MemberID);
             return View(registration);
         }
 
@@ -122,8 +125,8 @@ namespace RBALLEvents.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EventID"] = new SelectList(_context.Events, "RacquetballEventID", "RacquetballEventID", registration.EventID);
-            ViewData["MemberID"] = new SelectList(_context.Members, "ID", "Address", registration.MemberID);
+            ViewData["EventID"] = new SelectList(_context.Events, "RacquetballEventID", "EventName", registration.EventID);
+            ViewData["MemberID"] = new SelectList(_context.Members, "ID", "FullName", registration.MemberID);
             return View(registration);
         }
 
@@ -168,5 +171,7 @@ namespace RBALLEvents.Controllers
             return View();
 
         }
+
+           
     }
 }
